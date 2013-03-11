@@ -1,22 +1,40 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
 
-# Load boxen
-source /opt/boxen/env.sh
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/Code
 
-# Antigen
-source ~/.dotfiles/antigen/antigen.zsh
-# Antigen bundles
-antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle kennethreitz/autoenv
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
 
-# Adding fasd
-eval "$(fasd --init auto)"
+# all of our zsh files
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
 
-# prompt
-fpath=(~/.dotfiles/zsh/themes $fpath)
-autoload -Uz promptinit && promptinit
-prompt nicoulaj
+# load the path files
+for file in ${(M)config_files:#*/path.zsh}
+do
+  source $file
+done
+
+# load everything but the path and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+do
+  source $file
+done
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# load every completion after autocomplete loads
+for file in ${(M)config_files:#*/completion.zsh}
+do
+  source $file
+done
+
+unset config_files
