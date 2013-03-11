@@ -1,2 +1,5 @@
 # Load boxen
-source /opt/boxen/env.sh
+if [[ -a /opt/boxen/env.sh ]]
+then
+  source /opt/boxen/env.sh
+fi
