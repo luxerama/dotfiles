@@ -17,5 +17,6 @@ antigen-bundle kennethreitz/autoenv
 eval "$(fasd --init auto)"
 
 # prompt
-autoload -U promptinit
-promptinit
+fpath=(~/.dotfiles/zsh/themes $fpath)
+autoload -Uz promptinit && promptinit
+prompt nicoulaj
