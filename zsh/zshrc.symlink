@@ -1,0 +1,21 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+
+# Load boxen
+source /opt/boxen/env.sh
+
+# Antigen
+source ~/.dotfiles/antigen/antigen.zsh
+# Antigen bundles
+antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle kennethreitz/autoenv
+
+# Adding fasd
+eval "$(fasd --init auto)"
+
+# prompt
+autoload -U promptinit
+promptinit
