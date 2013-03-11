@@ -1,5 +1,5 @@
 # Antigen
-source ~/.dotfiles/antigen/antigen.zsh
+source $ZSH/zsh/antigen/antigen.zsh
 
 # Antigen bundles
 antigen-bundle zsh-users/zsh-syntax-highlighting
