@@ -4,7 +4,7 @@ then
   source /opt/boxen/env.sh
 fi
 
-# Load global nvm
+# Source nvm and chose node version
 if [[ -a /opt/boxen/nvm/nvm.sh ]]
 then
   source /opt/boxen/nvm/nvm.sh
