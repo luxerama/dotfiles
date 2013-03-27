@@ -15,8 +15,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-tbone'
 
-filetype plugin indent on     " required!
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -34,9 +34,23 @@ colorscheme solarized
 set number
 
 " Indentations
-set expandtab
+set autoindent
+set smartindent
+set smarttab
 set shiftwidth=2
 set softtabstop=2
-set smartindent
-set autoindent
+set tabstop=2
+set expandtab
 filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+" Mapping leaderkey
+let mapleader=","
+
+for f in split(glob('~/.dotfiles/**/*.vim'), '\n')
+  exe 'source' f
+endfor
