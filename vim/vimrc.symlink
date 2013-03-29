@@ -51,6 +51,6 @@ set list listchars=tab:\ \ ,trail:·
 " Mapping leaderkey
 let mapleader=","
 
-for f in split(glob('~/.dotfiles/**/*.vim'), '\n')
+for f in split(glob('~/.dotfiles/vim/plugin/settings/*.vim'), '\n')
   exe 'source' f
 endfor
