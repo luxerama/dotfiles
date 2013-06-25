@@ -2,9 +2,9 @@ CURRENT_DIR=`pwd`
 tmux send-keys "vim" C-m
 tmux rename-window "editor"
 
-tmux split-window -h
+tmux split-window -l 10
 tmux send-keys "cd $CURRENT_DIR;clear" C-m
 
-tmux split-window -l 10
+tmux split-window -h
 tmux send-keys "cd $CURRENT_DIR;clear" C-m
 tmux send-keys "be foreman start" C-m
