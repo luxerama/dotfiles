@@ -21,6 +21,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-tbone'
 Bundle 'rodjek/vim-puppet'
+Bundle 'mileszs/ack.vim'
 
 "
 " Brief help
