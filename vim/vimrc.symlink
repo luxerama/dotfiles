@@ -60,3 +60,9 @@ let mapleader=","
 for f in split(glob('~/.dotfiles/vim/plugin/settings/*.vim'), '\n')
   exe 'source' f
 endfor
+
+" Get off my lawn (Creds: thoughtbot)
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
