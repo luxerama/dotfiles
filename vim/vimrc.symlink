@@ -5,7 +5,7 @@ set nocompatible               " be iMproved
 filetype on                   " required!
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/src/dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -35,7 +35,7 @@ Bundle 'mileszs/ack.vim'
 
 " Colours and Styntax:
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 set number
 
