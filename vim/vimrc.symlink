@@ -22,6 +22,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-tbone'
 Bundle 'rodjek/vim-puppet'
 Bundle 'mileszs/ack.vim'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'kana/vim-textobj-user'
 
 "
 " Brief help
@@ -37,7 +39,8 @@ Bundle 'mileszs/ack.vim'
 syntax enable
 set background=light
 colorscheme solarized
-set number
+set relativenumber
+set colorcolumn=80
 
 " Indentations
 set autoindent
@@ -53,6 +56,9 @@ filetype plugin indent on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
+
+" Set unamedplus registers
+"set clipboard+=unnamedplus
 
 " Mapping leaderkey
 let mapleader=","
@@ -72,3 +78,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Thoughtbot auto expand splits
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
