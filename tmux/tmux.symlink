@@ -72,4 +72,4 @@ bind C-a last-window
 set -g history-limit 10000
 
 # Workflows
-bind r send-keys " ~/.dotfiles/tmux/workflow/ror-dev" C-m
+bind r send-keys " ~/src/dotfiles/tmux/workflow/ror-dev" C-m
