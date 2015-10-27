@@ -1,6 +1,11 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/src/dotfiles
 
+# Make sure we use vim keybindings
+bindkey -v
+bindkey '\e[3~' delete-char
+bindkey '^R' history-incremental-search-backward
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
@@ -35,3 +40,12 @@ do
 done
 
 unset config_files
+
+# added by travis gem
+[ -f /Users/vincent/.travis/travis.sh ] && source /Users/vincent/.travis/travis.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# vagrant fleetctl hack
+export FLEETCTL_TUNNEL=127.0.0.1:2222

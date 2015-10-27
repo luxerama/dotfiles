@@ -41,7 +41,7 @@ function prompt_nicoulaj_setup {
   local root_char='❯❯❯'
   local success_color='%F{071}'
   local failure_color='%F{124}'
-  local vcs_info_color='%F{242}'
+  #local vcs_info_color='%F{242}'
 
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable bzr git hg svn

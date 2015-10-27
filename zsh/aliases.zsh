@@ -1,6 +1,6 @@
 # Aliases in this file are bash and zsh compatible
 
-dotfiles=$HOME/.dotfiles
+dotfiles=$HOME/src/dotfiles
 
 # PS
 alias psa="ps aux"
@@ -37,7 +37,7 @@ alias gshw='git show'
 alias gi='vim .gitignore'
 alias gcm='git commit -m'
 alias gco='git checkout'
-alias ga='git add -A'
+alias ga='git add -A --interactive'
 alias gunc='git uncommit'
 alias gm='git merge'
 alias gms='git merge --squash'
@@ -57,6 +57,7 @@ alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
 alias gbd='git b -D -w'
+alias gbr='git branch -r'
 alias gbva='git branch -va'
 alias gdc='git diff --cached -w'
 alias gpub='grb publish'
@@ -94,6 +95,7 @@ alias gz='tar -zcvf'
 alias c='rails c' # Rails 3
 alias tfdl='tail -f log/development.log'
 alias tftl='tail -f log/test.log'
+alias fs='bundle exec foreman start'
 
 # Bundler
 alias be='bundle exec'
