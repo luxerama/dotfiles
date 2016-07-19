@@ -5,5 +5,5 @@ then
 fi
 
 # Source nvm and chose node version
-node_version="v0.10"
-nodenv global $node_version
+#node_version="4.0.0"
+#nodenv global $node_version

@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible               " be iMproved
 
 " turning filetype on so we can turn it off again
@@ -24,6 +25,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'mileszs/ack.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kana/vim-textobj-user'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

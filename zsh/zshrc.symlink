@@ -1,6 +1,8 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/src/dotfiles
 
+eval "$(docker-machine env default)"
+
 # Make sure we use vim keybindings
 bindkey -v
 bindkey '\e[3~' delete-char
@@ -49,3 +51,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # vagrant fleetctl hack
 export FLEETCTL_TUNNEL=127.0.0.1:2222
+
+# Setting SSL cert file path
+SSL_CERT_FILE=/opt/boxen/homebrew/etc/openssl/cacert.pem

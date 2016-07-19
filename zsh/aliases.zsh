@@ -111,3 +111,6 @@ alias rdmr='rake db:migrate:redo'
 
 # Rspec
 alias rs='rspec spec'
+
+# Weather
+alias weather="curl http://wttr.in/Manchester"
