@@ -1,4 +1,2 @@
-# prompt
-fpath=(~/src/dotfiles/zsh/themes $fpath)
-autoload -Uz promptinit && promptinit
-prompt nicoulaj
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history vi_mode)

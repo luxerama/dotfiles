@@ -2,6 +2,8 @@
 
 dotfiles=$HOME/src/dotfiles
 
+alias vim='/usr/local/Cellar/vim/7.4.2033/bin/vim'
+
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "

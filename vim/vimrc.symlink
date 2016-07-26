@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-tbone'
@@ -46,7 +47,8 @@ filetype plugin indent on    " required
 syntax enable
 set background=dark
 colorscheme solarized
-set relativenumber
+"set relativenumber
+set number
 set colorcolumn=80
 
 
