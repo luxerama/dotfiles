@@ -13,18 +13,24 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " My Plugins:
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-tbone'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'rodjek/vim-puppet'
 Plugin 'mileszs/ack.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kana/vim-textobj-user'
+Plugin 'vim-airline/vim-airline'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'valloric/youcompleteme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,7 +92,7 @@ set list listchars=tab:\ \ ,trail:·
 " Mapping leaderkey
 let mapleader=","
 
-for f in split(glob('~/.dotfiles/vim/plugin/settings/*.vim'), '\n')
+for f in split(glob('~/src/dotfiles/vim/plugin/settings/*.vim'), '\n')
   exe 'source' f
 endfor
 
@@ -107,3 +113,8 @@ set winwidth=84
 set winheight=5
 set winminheight=5
 set winheight=999
+
+set encoding=utf-8
+set laststatus=2
+
+let g:EclimCompletionMethod = 'omnifunc'

@@ -49,3 +49,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # vagrant fleetctl hack
 export FLEETCTL_TUNNEL=127.0.0.1:2222
+
+export NVM_DIR="/Users/vincent/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Making sure brew bin is first
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
