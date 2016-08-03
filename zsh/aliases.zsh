@@ -113,3 +113,6 @@ alias rdmr='rake db:migrate:redo'
 
 # Rspec
 alias rs='rspec spec'
+
+# Docker
+alias dc='docker-compose'
