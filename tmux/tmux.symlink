@@ -23,13 +23,19 @@ bind-key K resize-pane -U
 bind-key H resize-pane -L
 bind-key L resize-pane -R
 
+# Vim style pane selection
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
 # Chose session
 bind-key s choose-session
 
 # Use vi keybindings for tmux commandline input.
 # Note that to get command mode you need to hit ESC twice...
 set -g status-keys vi
- 
+
 # Use vi keybindings in copy and choice modes
  setw -g mode-keys vi
 
@@ -62,7 +68,6 @@ set -g prefix C-a
 set -sg escape-time 0
 
 # Screen like binding for last window
-unbind l
 bind C-a last-window
 
 # Bigger history
