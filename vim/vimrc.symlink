@@ -14,7 +14,6 @@ Plugin 'gmarik/vundle'
 
 " My Plugins:
 Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/nerdtree'
@@ -31,6 +30,8 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'valloric/youcompleteme'
+Plugin 'fatih/vim-go'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,8 +52,8 @@ filetype plugin indent on    " required
 
 " Colours and Styntax:
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme dracula
+
 "set relativenumber
 set number
 set colorcolumn=80
@@ -118,3 +119,4 @@ set encoding=utf-8
 set laststatus=2
 
 let g:EclimCompletionMethod = 'omnifunc'
+let g:syntastic_auto_loc_list = 0

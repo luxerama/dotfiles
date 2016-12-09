@@ -29,9 +29,10 @@ do
   source $file
 done
 
+fpath=(${ZSH}/zsh/completions $fpath)
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+autoload -Uz compinit
+compinit -i
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -40,18 +41,6 @@ do
 done
 
 unset config_files
-
-# added by travis gem
-[ -f /Users/vincent/.travis/travis.sh ] && source /Users/vincent/.travis/travis.sh
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# vagrant fleetctl hack
-export FLEETCTL_TUNNEL=127.0.0.1:2222
-
-export NVM_DIR="/Users/vincent/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Making sure brew bin is first
 export PATH="/usr/local/sbin:$PATH"

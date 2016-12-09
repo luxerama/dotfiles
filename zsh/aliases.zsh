@@ -116,3 +116,10 @@ alias rs='rspec spec'
 
 # Docker
 alias dc='docker-compose'
+alias dm='docker-machine'
+
+# Docker Machine
+alias dmr='eval $(docker-machine env)'
+
+# IP
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
